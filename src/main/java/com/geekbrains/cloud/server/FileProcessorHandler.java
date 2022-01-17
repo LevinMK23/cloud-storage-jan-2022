@@ -24,11 +24,12 @@ public class FileProcessorHandler implements Runnable {
         SenderUtils.sendFilesListToOutputStream(os, currentDir);
     }
 
+    // blocking mode
     @Override
     public void run() {
         try {
             while (true) {
-                String command = is.readUTF();
+                String command = is.readUTF(); // blocking mode
                 System.out.println("Received: " + command);
                 if (command.equals("#SEND#FILE")) {
                     SenderUtils.getFileFromInputStream(is, currentDir);

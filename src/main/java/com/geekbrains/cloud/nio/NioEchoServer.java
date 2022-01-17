@@ -7,10 +7,12 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Set;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class NioEchoServer {
 
     /**
@@ -25,31 +27,41 @@ public class NioEchoServer {
     private ServerSocketChannel serverChannel;
     private Selector selector;
     private ByteBuffer buf;
+    private final ClientProcessor clientProcessor;
 
-    public NioEchoServer() throws IOException {
+    // start - blocking op
+    public void start() throws IOException {
+        log.info("Server started...");
+        try {
+            while (serverChannel.isOpen()) {
+                selector.select(); // block
+                log.info("Keys selected...");
+                Set<SelectionKey> keys = selector.selectedKeys();
+                Iterator<SelectionKey> iterator = keys.iterator();
+                while (iterator.hasNext()) {
+                    SelectionKey key = iterator.next();
+                    if (key.isAcceptable()) {
+                        handleAccept();
+                    }
+                    if (key.isReadable()) {
+                        handleRead(key);
+                    }
+                    iterator.remove();
+                }
+            }
+        } catch (Throwable ex) {
+            clientProcessor.onExceptionCaught(ex);
+        }
+    }
+
+    public NioEchoServer(ClientProcessor clientProcessor) throws IOException {
+        this.clientProcessor = clientProcessor;
         buf = ByteBuffer.allocate(5);
         serverChannel = ServerSocketChannel.open();
         selector = Selector.open();
         serverChannel.configureBlocking(false);
         serverChannel.bind(new InetSocketAddress(8189));
         serverChannel.register(selector, SelectionKey.OP_ACCEPT);
-        System.out.println("Server started...");
-        while (serverChannel.isOpen()) {
-            selector.select(); // block
-            System.out.println("Keys selected...");
-            Set<SelectionKey> keys = selector.selectedKeys();
-            Iterator<SelectionKey> iterator = keys.iterator();
-            while (iterator.hasNext()) {
-                SelectionKey key = iterator.next();
-                if (key.isAcceptable()) {
-                    handleAccept();
-                }
-                if (key.isReadable()) {
-                    handleRead(key);
-                }
-                iterator.remove();
-            }
-        }
     }
 
     private void handleRead(SelectionKey key) throws IOException {
@@ -57,11 +69,12 @@ public class NioEchoServer {
         StringBuilder s = new StringBuilder();
         int read = 0;
         while (true) {
-            read = channel.read(buf);
+            read = channel.read(buf); // non blocking
             if (read == 0) {
                 break;
             }
             if (read < 0) {
+                clientProcessor.onClientDisconnected(channel);
                 channel.close();
                 return;
             }
@@ -71,22 +84,13 @@ public class NioEchoServer {
             }
             buf.clear();
         }
-        // process(s)
-        System.out.println("Received: " + s);
-        channel.write(ByteBuffer.wrap(s.toString().getBytes(StandardCharsets.UTF_8)));
+        clientProcessor.onMessageReceived(s.toString(), channel);
     }
 
     private void handleAccept() throws IOException {
         SocketChannel channel = serverChannel.accept();
         channel.configureBlocking(false);
         channel.register(selector, SelectionKey.OP_READ);
-        channel.write(ByteBuffer.wrap(
-                "Hello user. Welcome to our terminal\n\r".getBytes(StandardCharsets.UTF_8)
-        ));
-        System.out.println("Client accepted...");
-    }
-
-    public static void main(String[] args) throws IOException {
-        new NioEchoServer();
+        clientProcessor.onClientAccepted(channel);
     }
 }
