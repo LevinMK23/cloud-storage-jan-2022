@@ -5,21 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d6ad025-6fcf-43f9-b2a8-67622389d837" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/netty/EchoStringHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/netty/EchoStringPipeLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/netty/NettyEchoServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/netty/SerializablePipeline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/nio/ClientProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/nio/ClientProcessorAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/nio/ServerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/nio/TelnetTerminalProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/stream/ComparableExamples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/stream/ComparableRect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/stream/F.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/stream/Func.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/stream/StreamExamples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/stream/StreamInterfaces.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/stream/Sum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/stream/Test.java" afterDir="false" />
+      <change afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/kotlin/ru/yandex/market/adv/incut/services/incut/mapper/body/autobannerwithmodels/AutoBannerWithModelsIncutBodyMapper.kt" afterDir="false" />
+      <change afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/kotlin/ru/yandex/market/adv/incut/services/incut/mapper/body/models/ModelsIncutBodyMapper.kt" afterDir="false" />
+      <change afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/kotlin/ru/yandex/market/adv/incut/services/incut/model/body/AutoBannerWithModelsIncutBody.kt" afterDir="false" />
+      <change afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/kotlin/ru/yandex/market/adv/incut/services/incut/model/body/ModelsIncutBody.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/nio/BuffersExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/nio/BuffersExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/nio/NioEchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/nio/NioEchoServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/server/FileProcessorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/server/FileProcessorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverDir/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/serverDir/1.txt" afterDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/adv/incut/src/main/kotlin/ru/yandex/market/adv/incut/config/ServiceConfig.kt" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/kotlin/ru/yandex/market/adv/incut/config/ServiceConfig.kt" afterDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/adv/incut/src/main/kotlin/ru/yandex/market/adv/incut/services/incut/mapper/BannerIncutBodyMapper.kt" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/kotlin/ru/yandex/market/adv/incut/services/incut/mapper/body/banner/BannerIncutBodyMapper.kt" afterDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/adv/incut/src/main/resources/openapi/api/api.yaml" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/resources/openapi/api/api.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +61,13 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
-  <component name="RunManager" selected="Application.NettyEchoServer">
-    <configuration name="BuffersExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.nio.BuffersExample" />
+  <component name="RunManager" selected="Application.StreamExamples">
+    <configuration name="ComparableExamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.stream.ComparableExamples" />
       <module name="cloud-storage-jan-2022" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.cloud.nio.*" />
+          <option name="PATTERN" value="com.geekbrains.cloud.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NioEchoServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.nio.NioEchoServer" />
+    <configuration name="StreamExamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.stream.StreamExamples" />
       <module name="cloud-storage-jan-2022" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.cloud.nio.*" />
+          <option name="PATTERN" value="com.geekbrains.cloud.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PathExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.nio.PathExample" />
+    <configuration name="StreamInterfaces" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.stream.StreamInterfaces" />
       <module name="cloud-storage-jan-2022" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.cloud.nio.*" />
+          <option name="PATTERN" value="com.geekbrains.cloud.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.nio.ServerTest" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.stream.Test" />
       <module name="cloud-storage-jan-2022" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.cloud.nio.*" />
+          <option name="PATTERN" value="com.geekbrains.cloud.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,24 +127,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StreamExamples" />
+        <item itemvalue="Application.ComparableExamples" />
+        <item itemvalue="Application.StreamInterfaces" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.NettyEchoServer" />
-        <item itemvalue="Application.ServerTest" />
-        <item itemvalue="Application.BuffersExample" />
-        <item itemvalue="Application.NioEchoServer" />
-        <item itemvalue="Application.PathExample" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +165,8 @@
       <workItem from="1640625050065" duration="6490000" />
       <workItem from="1641808686918" duration="6000" />
       <workItem from="1641889838014" duration="10000" />
-      <workItem from="1642439604485" duration="6972000" />
+      <workItem from="1642439604485" duration="7590000" />
+      <workItem from="1642698386577" duration="5890000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 2. Nio">
       <created>1640630642652</created>
@@ -170,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640630642652</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lesson 3. Netty">
+      <created>1642446711108</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642446711108</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +190,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lesson 2. Nio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 2. Nio" />
+    <MESSAGE value="Lesson 3. Netty" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 3. Netty" />
   </component>
 </project>
